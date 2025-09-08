@@ -23,7 +23,7 @@ const Home = () => {
   
 const handleLogout = async () =>{
   try {
-    const result = await axios.get(`http://localhost:8000/api/auth/logout`, {withCredentials:true})
+    const result = await axios.get(`https://virtual-assistant-backend-zv2l.onrender.com/api/auth/logout`, {withCredentials:true})
     setUserData(null) 
     navigate("/signin")
   return result 
