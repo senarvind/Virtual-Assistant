@@ -13,7 +13,7 @@ const app = express();
 
 // ✅ CORS setup for React frontend
 app.use(cors({
-  origin: "http://localhost:5173",
+  origin: "https://virtualassistant-hay9.onrender.com",
   credentials: true
 }));
 
