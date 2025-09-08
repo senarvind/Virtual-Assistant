@@ -21,7 +21,7 @@ const Customize2 = () => {
         else{
           formData.append("imageUrl", selectedImage);
         }
-        const result = await axios.post(`http://localhost:8000/api/user/update`, formData,{withCredentials:true})
+        const result = await axios.post(`https://virtual-assistant-backend-zv2l.onrender.com`, formData,{withCredentials:true})
         console.log(result.data);
         setUserData(result.data);
         navigate("/")
