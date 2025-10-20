@@ -4,7 +4,7 @@ import axios from 'axios'
 export const userDataContext = createContext()
 
 const UserContext = ({children}) => {
-    const serverUrl = "http://localhost:8000"
+    const serverUrl = "https://virtual-assistant-backend-zv2l.onrender.com"
     const [userData, setUserData] = useState(null);
     const [frontendImage, setFrontendImage] = useState(null);
     const [backendImage, setBackendImage] = useState(null);
@@ -13,7 +13,7 @@ const UserContext = ({children}) => {
 
     const handleCurrentUser = async () =>{
       try {
-    const result = await axios.get(`http://localhost:8000/api/user/current`, {withCredentials:true})
+    const result = await axios.get(`https://virtual-assistant-backend-zv2l.onrender.com/api/user/current`, {withCredentials:true})
     console.log(result);
     setUserData(result.data);
 
@@ -25,7 +25,7 @@ const UserContext = ({children}) => {
 
     const getGeminiResponse = async (command)=>{
        try {
-        const result = await axios.post(`http://localhost:8000/api/user/asktoassistant`,{command},{withCredentials:true})
+        const result = await axios.post(`https://virtual-assistant-backend-zv2l.onrender.com/api/user/asktoassistant`,{command},{withCredentials:true})
         return result.data
 
        } catch (error) {
