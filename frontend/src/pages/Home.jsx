@@ -238,6 +238,9 @@ return ()=>{
 
   return (
     <div className='w-full h-[100vh]  bg-gradient-to-t from-[black] to-[#02023d] flex justify-center items-center overflow-hidden flex-col gap-[15px]'>
+       <div className='top-[10px] left-[10px]' onClick={()=> navigate('/jokes')}>
+      <button className='min-w-[150px] h-[60px] mt-[30px] font-semibold bg-white  rounded-full cursor-pointer'>Random Jokes</button>
+    </div>
  <FiMenu className='lg:hidden text-white absolute top-[20px] right-[20px] w-[25px] h-[25px]' onClick={()=> setHam(true)}/>
 
  <div className={`absolute lg:hidden top-0 w-full h-full bg-[#00000053] backdrop-blur-lg p-[30px] flex flex-col gap-[20px] items-start ${ham?"translate-x-0" : "translate-x-full"} transition-transform`}>
@@ -245,7 +248,7 @@ return ()=>{
 
   <button className='min-w-[150px] h-[60px] mt-[30px] font-semibold bg-white  rounded-full cursor-pointer'onClick={handleLogout}>Log Out </button>
      <button className='min-w-[150px] h-[60px] mt-[30px] font-semibold bg-white rounded-full px-[20px] py-[20px] cursor-pointer' onClick={()=> navigate("/customize")}> Customize your Assistant</button>
- 
+
  <div className='w-full h-[2px] bg-gray-400 '>
  <h1 className='text-white font-semibold text-[30px]'>History</h1>
 
@@ -258,6 +261,7 @@ return ()=>{
  </div>
  </div>
    <button className='min-w-[150px] h-[60px] mt-[30px] hidden lg:block font-semibold bg-white absolute top-[20px] right-[20px] rounded-full cursor-pointer'onClick={handleLogout}>Log Out </button>
+  
      <button className='min-w-[150px] h-[60px] mt-[30px] hidden lg:block font-semibold bg-white absolute rounded-full top-[100px] right-[20px] px-[20px] py-[20px] cursor-pointer' onClick={()=> navigate("/customize")}> Customize your Assistant</button>
      <div className='w-[300px] h-[400px] flex justify-center items-center overflow-hidden  rounded-4xl shadow-lg'>
 <img src={userData?.assistantImage} className='h-full object-cover'/>

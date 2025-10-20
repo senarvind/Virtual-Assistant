@@ -7,6 +7,7 @@ import { useContext } from 'react'
 import { userDataContext } from './context/UserContext.jsx'
 import Home from './pages/Home.jsx'
 import Customize2 from './pages/Customize2.jsx'
+import Jokes from './component/RandomJokes.jsx'
 
 function App() {
   const {userData, setUserData} = useContext(userDataContext);
@@ -17,6 +18,7 @@ function App() {
       <Route path='/signin' element= {!userData?<SignIn/>: <Navigate to={"/"}/>}/>
       <Route path='/customize' element= {userData?<Customize/>:<Navigate to={"/signup"}/>}/>
       <Route path='/customize2' element= {userData?<Customize2/>:<Navigate to={"/signup"}/>}/>
+      <Route path='/jokes' element= {<Jokes/>}/>
     </Routes>
   )
 }
